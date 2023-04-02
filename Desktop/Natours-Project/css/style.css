@@ -45,6 +45,7 @@ body {
 
 .logo {
   height: 35px;
+  animation: logoMove 1.8s infinite;
 }
 
 .text-box {
@@ -52,9 +53,14 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  /* backface-visibility: hidden; */
 }
 
 .heading-primary-main {
@@ -63,6 +69,12 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* animation-delay: 3s; 
+  animation-iteration-count: 3;
+  */
 }
 
 .heading-primary-sub {
@@ -71,4 +83,117 @@ body {
   font-size: 20px;
   font-weight: 700px;
   letter-spacing: 17.4px;
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes logoMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    height: 45px;
+    transform: translate(25px);
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-25px);
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 300ms;
+  backface-visibility: hidden;
+  position: relative;
+  animation: moveFromBottom 0.5s ease-in 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  padding: 15px 40px;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 400ms;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
