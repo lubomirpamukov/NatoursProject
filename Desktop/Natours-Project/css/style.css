@@ -12,10 +12,13 @@ Dark green: #28b485
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 62.5%;
   line-height: 1.7;
   color: #777;
   padding: 30px;
@@ -39,13 +42,13 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
   height: 35px;
-  animation: logoMove 1.8s infinite;
+  /* animation: logoMove 1.8s infinite;  */
 }
 
 .text-box {
@@ -59,16 +62,16 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
   /* backface-visibility: hidden; */
 }
 
 .heading-primary-main {
   display: block;
-  margin-left: 35px;
-  font-size: 60px;
+  margin-left: 3.5rem;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -79,20 +82,20 @@ body {
 
 .heading-primary-sub {
   display: block;
-  margin-left: 17.4px;
-  font-size: 20px;
-  font-weight: 700px;
-  letter-spacing: 17.4px;
+  margin-left: 1.75rem;
+  font-size: 2rem;
+  font-weight: 70rem;
+  letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -103,11 +106,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -118,7 +121,7 @@ body {
 
 @keyframes moveFromBottom {
   0% {
-    transform: translateY(25px);
+    transform: translateY(2.5rem);
     opacity: 0;
   }
   100% {
@@ -127,7 +130,7 @@ body {
   }
 }
 
-@keyframes logoMove {
+/* @keyframes logoMove {
   0% {
     transform: translateX(0);
   }
@@ -146,14 +149,14 @@ body {
   100% {
     transform: translateX(0);
   }
-}
+} */
 
 .btn:link,
 .btn:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 300ms;
   backface-visibility: hidden;
   position: relative;
@@ -162,18 +165,18 @@ body {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .btn-white {
   background-color: #fff;
   color: #777;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
 }
 
 .btn::after {
@@ -181,7 +184,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
