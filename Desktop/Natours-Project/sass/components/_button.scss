@@ -55,3 +55,29 @@
     color: $color-grey-dark;
   }
 }
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $defoult-font-size;
+    color: $color-primary;
+    font-weight: $font-weight-bold;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.3rem;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-primary;
+    // border-radius: 0.2rem;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
+  }
+}

@@ -1,6 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: $font-weight-light;
   line-height: 1.7;
   color: $color-grey-dark;
   padding: 30px;
@@ -15,7 +15,7 @@ body {
     display: block;
     margin-left: 3.5rem;
     font-size: 6rem;
-    font-weight: 400;
+    font-weight: $font-weight-light;
     letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -38,7 +38,7 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   display: inline-block;
   background-image: linear-gradient(
     to right,
@@ -53,6 +53,20 @@ body {
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $defoult-font-size;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+.paragraph-about-section {
+  font-size: $defoult-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
 
