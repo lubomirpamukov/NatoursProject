@@ -1,73 +1,4 @@
-Skip
-  to
-  content
-  Search
-  or
-  jump
-  to…
-  Pull
-  requests
-  Issues
-  Codespaces
-  Marketplace
-  Explore
-  @lubomirpamukov
-  lubomirpamukov
-  /
-  NatoursProject
-  Public
-  Cannot
-  fork
-  because
-  you
-  own
-  this
-  repository
-  and
-  are
-  not
-  a
-  member
-  of
-  any
-  organizations.
-  Code
-  Issues
-  Pull
-  requests
-  Actions
-  Projects
-  Wiki
-  Security
-  Insights
-  Settings
-  Beta
-  Try
-  the
-  new
-  code
-  view
-  NatoursProject/Desktop/Natours-Project/css/style.css
-  @lubomirpamukov
-  lubomirpamukov
-  finished
-  about
-  section
-  Latest
-  commit
-  b530ef0
-  30
-  minutes
-  ago
-  History
-  1
-  contributor
-  334
-  lines
-  (311 sloc)
-  5.83
-  KB
-  *,
+*,
 *::before,
 *::after {
   margin: 0;
@@ -123,15 +54,18 @@ body {
   0% {
     transform: translateX(0);
   }
+
   50% {
     height: 45px;
     transform: translate(25px);
     transform: rotate(180deg);
   }
+
   75% {
     transform: translate(-25px);
     transform: rotate(360deg);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -183,10 +117,6 @@ body {
   letter-spacing: 0.2rem;
   transition: all 0.2s;
 }
-.heading-secondary:hover {
-  transform: skewY(2deg) skewX(15deg) scale(1.1);
-  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
-}
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -200,6 +130,7 @@ body {
 .paragraph-about-section:not(:last-child) {
   margin-bottom: 3rem;
 }
+
 
 .u-center-text {
   text-align: center;
@@ -267,8 +198,7 @@ body {
   color: #777;
 }
 
-.btn-text:link,
-.btn-text:visited {
+.btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   color: #55c57a;
   font-weight: 700;
@@ -321,22 +251,49 @@ body {
   transform: scale(0.9);
 }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.6rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.feature-box__icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.15);
+}
 .section-about {
   background-color: #f7f7f7;
   padding: 35rem 0;
   margin-top: -20vh;
 }
 
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  margin-top: -10rem;
+  transform: skewY(-7deg);
+}
+.section-features > * {
+  transform: skewY(7deg);
+}
+
 .header {
   color: #fff;
   grid-template-rows: 50fr 500fr;
   height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 133, 0.8)
-    ),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -371,10 +328,10 @@ body {
   display: table;
   clear: both;
 }
-.row [class^="col-"] {
+.row [class^=col-] {
   float: left;
 }
-.row [class^="col-"]:not(:last-child) {
+.row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
 }
 .row .col-1-of-2 {
@@ -384,14 +341,22 @@ body {
   width: calc((100% - 2 * 6rem) / 3);
 }
 .row .col-2-of-3 {
-  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+  width: calc(
+      2 * ((100% - 2 * 6rem) / 3) + 6rem
+    );
 }
 .row .col-1-of-4 {
   width: calc((100% - 3 * 6rem) / 4);
 }
 .row .col-2-of-4 {
-  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+  width: calc(
+      2 * ((100% - 3 * 6rem) / 4) + 6rem
+    );
 }
 .row .col-3-of-4 {
-  width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem);
+  width: calc(
+      3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem
+    );
 }
+
+/*# sourceMappingURL=style.css.map */
