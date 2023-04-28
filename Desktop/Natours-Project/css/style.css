@@ -563,6 +563,9 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 4000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
 }
 .popup__content {
   position: absolute;
@@ -575,6 +578,9 @@ body {
   border-radius: 0.3rem;
   display: table;
   overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.2);
+  transition: all 0.4s 0.2s;
 }
 .popup__left {
   width: 33.333333%;
@@ -597,6 +603,27 @@ body {
   column-gap: 4rem;
   column-rule: 1px solid #eee;
   hyphens: auto;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup__close:link, .popup__close:visited {
+  display: inline-block;
+  font-size: 4rem;
+  text-decoration: none;
+  color: #777;
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+  transition: all 0.2s;
+}
+.popup__close:hover {
+  color: #55c57a;
 }
 
 .section-about {
