@@ -8,10 +8,16 @@
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem;
+  @include respond(tablet-port) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem;
+  @include respond(tablet-port) {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .u-margin-top-medium {
@@ -24,4 +30,13 @@
 
 .u-margin-top-huge {
   margin-top: 10rem;
+}
+
+.btn-fix {
+  @include respond(tablet-port) {
+    position: absolute !important;
+    top: 91%;
+    left: 50%;
+    margin-left: -73px;
+  }
 }
