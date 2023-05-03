@@ -472,6 +472,7 @@ ORDER : Base + typography > genera; ;ayput + grid > page layout > components
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 @media (max-width: 75em) {
   html {
