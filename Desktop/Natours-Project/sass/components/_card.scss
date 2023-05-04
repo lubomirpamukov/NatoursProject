@@ -183,7 +183,7 @@
     text-transform: uppercase;
   }
 
-  @include respond(tablet-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     // FUNCTIONALITY
     border-radius: $border-radius-medium;
     height: auto;
